@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  width: 100%;
+  top: 0px;
+  z-index: 1;
+  background-color: rgb(172, 172, 172);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+}
+
+main {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 200px;
+  margin-top: 20px;
+}
+
+.navigation {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*.navigation li {
+  background-color: white;
+  padding: 10px;
+  border-radius: 30px;
+}*/
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 40%;
+  background-repeat: no-repeat;
+  background-image: url(../img/São-Paulo-banner.jpg);
+}
+
+.curiosities__title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+.container__cards {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.curiosities__card {
+  width: 335px;
+  height: 534px;
+  border-radius: 10px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+}
+
+.card__one {
+  background-image: url(../img/sao-vicente.jpg);
+  background-position: center;
+}
+
+.card__two {
+  background-image: url(../img/campos-do-jordao.jpg);
+  background-position: center;
+}
+
+.card__three {
+  background-image: url(../img/porto-santos.png);
+  background-position: center;
+}
+
+.curiosities__card:is(:hover, :focus) {
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+
+.curiosities__card p {
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  font-size: 1.7rem;
+
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.curiosities__card p:is(:hover, :focus) {
+  transform: scale(1);
+  opacity: 1;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0);
+}
+
+.video__card {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video__card h2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.video__card iframe {
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
