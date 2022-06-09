@@ -7,18 +7,20 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  
 }
 
 header {
   width: 100%;
   top: 0px;
-  z-index: 1;
-  background-color: rgb(172, 172, 172);
+  background-color: #f3f3f3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,8 +34,9 @@ main {
 }
 
 .logo img {
-  width: 200px;
+  width: 6rem;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .navigation {
@@ -44,22 +47,18 @@ main {
   margin-bottom: 20px;
 }
 
-/*.navigation li {
-  background-color: white;
-  padding: 10px;
-  border-radius: 30px;
-}*/
-
 .navigation a {
   text-decoration: none;
   color: black;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .banner {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 40%;
+  height: 400px;
   background-repeat: no-repeat;
   background-image: url(../img/São-Paulo-banner.jpg);
 }
@@ -88,7 +87,6 @@ main {
   justify-items: center;
   align-items: center;
   padding: 10px;
-  overflow: hidden;
   cursor: pointer;
   box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
@@ -110,11 +108,6 @@ main {
   background-position: center;
 }
 
-/*.curiosities__card:is(:hover, :focus) {
-  transform: scale(1.2);
-  transition: transform 0.4s;
-}*/
-
 .curiosities__card p {
   opacity: 1;
   color: rgb(255, 255, 255);
@@ -122,56 +115,99 @@ main {
   font-size: 1.5rem;
   text-shadow: 4px 4px 6px rgb(0, 0, 0);
   backdrop-filter: blur(3px);
-
-  transition: opacity 0.4s, transform 0.4s;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.419);
+  
+  transition: transform 0.4s;
 }
-
-/*.curiosities__card p:is(:hover, :focus) {
-  transform: scale(1);
-  opacity: 1;
-  text-shadow: 4px 4px 6px rgb(0, 0, 0);
-}*/
 
 .video__card {
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
 .video__card h2 {
-  text-align: center;
   margin-top: 50px;
-  margin-bottom: 10px;
   font-size: 1.5rem;
 }
 
 .video__card iframe {
   width: 400px;
   height: 250px;
-  border-radius: 10px;
+  
 }
 
-@media (min-width: 820px){
+.socialmedia {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f3f3f3;
+  height: 100px;
+  width: 100%;
+  color: #fff9f9;
+  padding: 10px;
+  bottom: 0;
+}
+
+.socialmedia img {
+  height: 3rem;
+}
+
+.copyright {
+  background-color: black;
+  font-size: 1rem;
+  color: #f3f3f3;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  header {
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+  }
+
   .curiosities__card:is(:hover, :focus) {
-  transform: scale(1.2);
-  transition: transform 0.4s;
-}
+    transform: scale(1.2);
+    transition: transform 0.4s;
+  }
 
-.curiosities__card p {
-  opacity: 0;
-  color: rgb(255, 255, 255);
-  text-align: justify;
-  font-size: 1.5rem;
-  text-shadow: 4px 4px 6px rgb(0, 0, 0);
-  backdrop-filter: blur(3px);
+  .curiosities__card p {
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    font-size: 1.5rem;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+    backdrop-filter: blur(3px);
 
-  transition: opacity 0.4s, transform 0.4s;
-}
+    transition: opacity 0.4s, transform 0.4s;
+  }
 
-.curiosities__card p:is(:hover, :focus) {
-  transform: scale(1);
-  opacity: 1;
-  text-shadow: 4px 4px 6px rgb(0, 0, 0);
-}
+  .curiosities__card p:is(:hover, :focus) {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  }
+
+  .video__card iframe {
+    width: 768px;
+    height: 500px;
+    
+  }
 }
