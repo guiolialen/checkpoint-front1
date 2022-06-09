@@ -110,25 +110,27 @@ main {
   background-position: center;
 }
 
-.curiosities__card:is(:hover, :focus) {
+/*.curiosities__card:is(:hover, :focus) {
   transform: scale(1.2);
   transition: transform 0.4s;
-}
+}*/
 
 .curiosities__card p {
-  opacity: 0;
+  opacity: 1;
   color: rgb(255, 255, 255);
   text-align: justify;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  backdrop-filter: blur(3px);
 
   transition: opacity 0.4s, transform 0.4s;
 }
 
-.curiosities__card p:is(:hover, :focus) {
+/*.curiosities__card p:is(:hover, :focus) {
   transform: scale(1);
   opacity: 1;
   text-shadow: 4px 4px 6px rgb(0, 0, 0);
-}
+}*/
 
 .video__card {
   margin: 10px;
@@ -148,4 +150,28 @@ main {
   width: 400px;
   height: 250px;
   border-radius: 10px;
+}
+
+@media (min-width: 820px){
+  .curiosities__card:is(:hover, :focus) {
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+
+.curiosities__card p {
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  text-align: justify;
+  font-size: 1.5rem;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  backdrop-filter: blur(3px);
+
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.curiosities__card p:is(:hover, :focus) {
+  transform: scale(1);
+  opacity: 1;
+  text-shadow: 4px 4px 6px rgb(0, 0, 0);
+}
 }
