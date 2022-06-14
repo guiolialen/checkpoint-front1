@@ -27,10 +27,16 @@ header {
   box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 2px 13px 18px -5px rgba(0, 0, 0, 0.75);
+  padding: 0, 20px;
 }
 
 main {
   flex-grow: 1;
+  background-image: url(/img/BackgroundSP.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+
 }
 
 .logo img {
@@ -52,6 +58,7 @@ main {
   color: black;
   font-size: 1rem;
   font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .banner {
@@ -68,6 +75,7 @@ main {
   margin-top: 20px;
   margin-bottom: 50px;
   font-size: 1rem;
+  
 }
 
 .container__cards {
