@@ -31,7 +31,7 @@ header {
 
 main {
   flex-grow: 1;
-  background-image: url(/img/BackgroundSP.png);
+  background-image: url(../img/BackgroundSP.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
